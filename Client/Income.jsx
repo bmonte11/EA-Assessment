@@ -34,10 +34,15 @@ export default class Income extends React.Component {
         type: 'application/json',
       });
       return (
-        <div style={{ margin: 'auto' }}>
-          <h2>Student Family Income Breakdown</h2>
-          <GetAppIcon onClick={() => saveAs(blob, 'IncomeData.csv')} />
-          <div id="income-chart" style={{ padding: 25 }}>
+        <div style={incomeStyle}>
+          <div style={headingStyle}>
+            <h2>Student Family Income Breakdown</h2>
+            <GetAppIcon
+              cursor={'pointer'}
+              onClick={() => saveAs(blob, 'IncomeData.csv')}
+            />
+          </div>
+          <div id="income-chart" style={chartStyle}>
             <DonutChart
               height={750}
               width={750}
@@ -74,3 +79,24 @@ export default class Income extends React.Component {
     }
   }
 }
+
+const incomeStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15,
+};
+
+const headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15,
+};
+
+const chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25,
+};

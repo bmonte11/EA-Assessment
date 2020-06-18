@@ -172,15 +172,18 @@ var Ethnicity = /*#__PURE__*/function (_React$Component) {
         var blob = new Blob([JSON.stringify(students)], {
           type: 'application/json'
         });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ethnicity Breakdown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: ethnicityStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: headingStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Ethnicity Breakdown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          cursor: 'pointer',
           onClick: function onClick() {
             return saveAs(blob, 'EthnicityData.csv');
           }
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "ethnicity-chart",
-          style: {
-            padding: 25
-          }
+          style: chartStyle
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
           height: 750,
           width: 750,
@@ -222,6 +225,24 @@ var Ethnicity = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+var ethnicityStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15
+};
+var headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15
+};
+var chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25
+};
 
 /***/ }),
 
@@ -315,18 +336,17 @@ var Income = /*#__PURE__*/function (_React$Component) {
           type: 'application/json'
         });
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          style: {
-            margin: 'auto'
-          }
+          style: incomeStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: headingStyle
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Student Family Income Breakdown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          cursor: 'pointer',
           onClick: function onClick() {
             return Object(file_saver__WEBPACK_IMPORTED_MODULE_3__["saveAs"])(blob, 'IncomeData.csv');
           }
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "income-chart",
-          style: {
-            padding: 25
-          }
+          style: chartStyle
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
           height: 750,
           width: 750,
@@ -359,6 +379,24 @@ var Income = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+var incomeStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15
+};
+var headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15
+};
+var chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25
+};
 
 /***/ }),
 
@@ -407,12 +445,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var headerStyle = {
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  padding: 15,
-  borderBottom: 'solid'
-};
 
 var Navbar = /*#__PURE__*/function (_React$Component) {
   _inherits(Navbar, _React$Component);
@@ -445,10 +477,12 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Button"], null, "Income"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "right-side"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Save__WEBPACK_IMPORTED_MODULE_3___default.a, {
+        cursor: 'pointer',
         onClick: function onClick() {
           return window.print();
         }
-      }, "Save as PDF"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Print__WEBPACK_IMPORTED_MODULE_4___default.a, {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Print__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        cursor: 'pointer',
         onClick: function onClick() {
           return window.print();
         }
@@ -460,6 +494,12 @@ var Navbar = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+var headerStyle = {
+  display: 'flex',
+  justifyContent: 'space-around',
+  padding: 15,
+  borderBottom: 'solid'
+};
 
 /***/ }),
 
@@ -549,15 +589,18 @@ var Programs = /*#__PURE__*/function (_React$Component) {
         var blob = new Blob([JSON.stringify(programs)], {
           type: 'application/json'
         });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Program Breakdown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: programStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: headingStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Program Breakdown"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          cursor: 'pointer',
           onClick: function onClick() {
             return saveAs(blob, 'ProgramData.csv');
           }
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "program-chart",
-          style: {
-            padding: 25
-          }
+          style: chartStyle
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
           height: 750,
           width: 750,
@@ -653,6 +696,24 @@ var Programs = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
+var programStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15
+};
+var headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15
+};
+var chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25
+};
 
 /***/ }),
 
@@ -821,12 +882,18 @@ var School = /*#__PURE__*/function (_React$Component) {
         var blob = new Blob([JSON.stringify(results[0].school)], {
           type: 'application/json'
         });
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "School Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: infoStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: headingStyle
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "School Info"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_GetApp__WEBPACK_IMPORTED_MODULE_1___default.a, {
+          cursor: 'pointer',
           onClick: function onClick() {
             return saveAs(blob, 'SchoolData.csv');
           }
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "school-info"
+        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "school-info",
+          style: chartStyle
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "name"
         }, "School: ", results[0].school.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -843,6 +910,26 @@ var School = /*#__PURE__*/function (_React$Component) {
   return School;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
+var infoStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15
+};
+var headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15
+};
+var chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: 25
+};
 /* harmony default export */ __webpack_exports__["default"] = (School);
 
 /***/ }),

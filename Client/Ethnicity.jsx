@@ -32,10 +32,15 @@ export default class Ethnicity extends React.Component {
         type: 'application/json',
       });
       return (
-        <div>
-          <h2>Ethnicity Breakdown</h2>
-          <GetAppIcon onClick={() => saveAs(blob, 'EthnicityData.csv')} />
-          <div id="ethnicity-chart" style={{ padding: 25 }}>
+        <div style={ethnicityStyle}>
+          <div style={headingStyle}>
+            <h2>Ethnicity Breakdown</h2>
+            <GetAppIcon
+              cursor={'pointer'}
+              onClick={() => saveAs(blob, 'EthnicityData.csv')}
+            />
+          </div>
+          <div id="ethnicity-chart" style={chartStyle}>
             <DonutChart
               height={750}
               width={750}
@@ -85,3 +90,24 @@ export default class Ethnicity extends React.Component {
     }
   }
 }
+
+const ethnicityStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15,
+};
+
+const headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15,
+};
+
+const chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25,
+};

@@ -32,10 +32,15 @@ export default class Programs extends React.Component {
         type: 'application/json',
       });
       return (
-        <div>
-          <h2>Program Breakdown</h2>
-          <GetAppIcon onClick={() => saveAs(blob, 'ProgramData.csv')} />
-          <div id="program-chart" style={{ padding: 25 }}>
+        <div style={programStyle}>
+          <div style={headingStyle}>
+            <h2>Program Breakdown</h2>
+            <GetAppIcon
+              cursor={'pointer'}
+              onClick={() => saveAs(blob, 'ProgramData.csv')}
+            />
+          </div>
+          <div id="program-chart" style={chartStyle}>
             <DonutChart
               height={750}
               width={750}
@@ -156,3 +161,24 @@ export default class Programs extends React.Component {
     }
   }
 }
+
+const programStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15,
+};
+
+const headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15,
+};
+
+const chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 25,
+};

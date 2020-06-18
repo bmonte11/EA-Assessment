@@ -33,10 +33,15 @@ class School extends React.Component {
         type: 'application/json',
       });
       return (
-        <div>
-          <h2>School Info</h2>
-          <GetAppIcon onClick={() => saveAs(blob, 'SchoolData.csv')} />
-          <div id="school-info">
+        <div style={infoStyle}>
+          <div style={headingStyle}>
+            <h2>School Info</h2>
+            <GetAppIcon
+              cursor={'pointer'}
+              onClick={() => saveAs(blob, 'SchoolData.csv')}
+            />
+          </div>
+          <div id="school-info" style={chartStyle}>
             <div id="name">School: {results[0].school.name}</div>
             <div id="website">Website: {results[0].school.school_url}</div>
             <div id="location">
@@ -54,5 +59,28 @@ class School extends React.Component {
     }
   }
 }
+
+const infoStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: 15,
+};
+
+const headingStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 15,
+};
+
+const chartStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: 25,
+};
 
 export default School;

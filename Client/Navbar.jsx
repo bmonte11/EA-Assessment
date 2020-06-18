@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 import SaveIcon from '@material-ui/icons/Save';
 import PrintIcon from '@material-ui/icons/Print';
 
-const headerStyle = {
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  padding: 15,
-  borderBottom: 'solid',
-};
-
 export default class Navbar extends React.Component {
   constructor() {
     super();
@@ -34,11 +27,17 @@ export default class Navbar extends React.Component {
             </Link>
           </div>
           <div id="right-side">
-            <SaveIcon onClick={() => window.print()}>Save as PDF</SaveIcon>
-            <PrintIcon onClick={() => window.print()} />
+            <SaveIcon cursor={'pointer'} onClick={() => window.print()} />
+            <PrintIcon cursor={'pointer'} onClick={() => window.print()} />
           </div>
         </nav>
       </div>
     );
   }
 }
+const headerStyle = {
+  display: 'flex',
+  justifyContent: 'space-around',
+  padding: 15,
+  borderBottom: 'solid',
+};
