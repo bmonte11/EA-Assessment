@@ -13,3 +13,11 @@ body {
   flex-direction: row;
   margin: 3rem;
 }
+
+#header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px;
+  border-bottom: rgb(223, 223, 223) 1px solid;
+}
