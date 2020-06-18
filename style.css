@@ -21,3 +21,12 @@ body {
   padding: 15px;
   border-bottom: rgb(223, 223, 223) 1px solid;
 }
+
+#income-chart {
+  display: flex;
+  padding: 15px;
+}
+
+nav a {
+  padding: 3rem;
+}
