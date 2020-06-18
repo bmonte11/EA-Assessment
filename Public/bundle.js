@@ -86,15 +86,16 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./Client/School.jsx":
-/*!***************************!*\
-  !*** ./Client/School.jsx ***!
-  \***************************/
+/***/ "./Client/Ethnicity.jsx":
+/*!******************************!*\
+  !*** ./Client/Ethnicity.jsx ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ethnicity; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_donut_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-donut-chart */ "./node_modules/react-donut-chart/index.js");
@@ -120,6 +121,345 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Ethnicity = /*#__PURE__*/function (_React$Component) {
+  _inherits(Ethnicity, _React$Component);
+
+  var _super = _createSuper(Ethnicity);
+
+  function Ethnicity(props) {
+    _classCallCheck(this, Ethnicity);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Ethnicity, [{
+    key: "render",
+    value: function render() {
+      var students = this.props.students;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "ethnicity-chart"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        height: 300,
+        width: 400,
+        data: [{
+          label: 'White',
+          value: students.white * 100
+        }, {
+          label: 'Black',
+          value: students.black * 100
+        }, {
+          label: 'Aian',
+          value: students.aian * 100
+        }, {
+          label: 'Asian',
+          value: students.asian * 100
+        }, {
+          label: 'Hispanic',
+          value: students.hispanic * 100
+        }, {
+          label: 'NHPI',
+          value: students.nhpi * 100
+        }, {
+          label: 'Non-resident Alien',
+          value: students.non_resident_alien * 100
+        }, {
+          label: 'Two or More',
+          value: students.two_or_more * 100
+        }, {
+          label: 'Unknown',
+          value: students.unknown * 100
+        }]
+      }));
+    }
+  }]);
+
+  return Ethnicity;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./Client/Income.jsx":
+/*!***************************!*\
+  !*** ./Client/Income.jsx ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Income; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_donut_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-donut-chart */ "./node_modules/react-donut-chart/index.js");
+/* harmony import */ var react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_donut_chart__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Income = /*#__PURE__*/function (_React$Component) {
+  _inherits(Income, _React$Component);
+
+  var _super = _createSuper(Income);
+
+  function Income(props) {
+    _classCallCheck(this, Income);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Income, [{
+    key: "render",
+    value: function render() {
+      var income = this.props.income;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "income-chart"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        formatValues: function formatValues(values, total) {
+          return "".concat((values / total * 100).toFixed(2), "%");
+        },
+        data: [{
+          label: '$0-$30,000',
+          value: income.share_lowincome['0_30000'] * 100
+        }, {
+          label: '$30,001-$48,000',
+          value: income.share_middleincome['30001_48000'] * 100
+        }, {
+          label: '$48,001-$75,000',
+          value: income.share_middleincome['48001_75000'] * 100
+        }, {
+          label: '$75,001-$110,000',
+          value: income.share_highincome['75001_110000'] * 100
+        }, {
+          label: '$110,001+',
+          value: income.share_highincome['110001plus'] * 100
+        }]
+      }));
+    }
+  }]);
+
+  return Income;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./Client/Programs.jsx":
+/*!*****************************!*\
+  !*** ./Client/Programs.jsx ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Programs; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_donut_chart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-donut-chart */ "./node_modules/react-donut-chart/index.js");
+/* harmony import */ var react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_donut_chart__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Programs = /*#__PURE__*/function (_React$Component) {
+  _inherits(Programs, _React$Component);
+
+  var _super = _createSuper(Programs);
+
+  function Programs(props) {
+    _classCallCheck(this, Programs);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Programs, [{
+    key: "render",
+    value: function render() {
+      var programs = this.props.programs;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "program-chart"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        height: 800,
+        width: 800,
+        formatValues: function formatValues(values, total) {
+          return "".concat((values / total * 100).toFixed(2), "%");
+        },
+        data: [{
+          label: 'Agriculture',
+          value: programs.agriculture * 100
+        }, {
+          label: 'Architecture',
+          value: programs.agriculture * 100
+        }, {
+          label: 'Biological',
+          value: programs.biological * 100
+        }, {
+          label: 'Business Marketing',
+          value: programs.business_marketing * 100
+        }, {
+          label: 'Communications',
+          value: programs.communication * 100
+        }, {
+          label: 'Computer',
+          value: programs.computer * 100
+        }, {
+          label: 'Education',
+          value: programs.education * 100
+        }, {
+          label: 'Engineering',
+          value: programs.engineering * 100
+        }, {
+          label: 'English',
+          value: programs.english * 100
+        }, {
+          label: 'Ehtnic Cultural Gender',
+          value: programs.ethnic_cultural_gender * 100
+        }, {
+          label: 'Family Consumer Science',
+          value: programs.family_consumer_science * 100
+        }, {
+          label: 'Health',
+          value: programs.health * 100
+        }, {
+          label: 'History',
+          value: programs.history * 100
+        }, {
+          label: 'Humanities',
+          value: programs.humanities * 100
+        }, {
+          label: 'Language',
+          value: programs.language * 100
+        }, {
+          label: 'Legal',
+          value: programs.legal * 100
+        }, {
+          label: 'Mathematics',
+          value: programs.mathematics * 100
+        }, {
+          label: 'Multi-discipline',
+          value: programs.multidiscipline * 100
+        }, {
+          label: 'Parks & Recreation Fitness',
+          value: programs.parks_recreation_fitness * 100
+        }, {
+          label: 'Philosophy/Religion',
+          value: programs.philosophy_religious * 100
+        }, {
+          label: 'Physical Science',
+          value: programs.physical_science * 100
+        }, {
+          label: 'Psychology',
+          value: programs.psychology * 100
+        }, {
+          label: 'Public Administration/Social Service',
+          value: programs.public_administration_social_service * 100
+        }, {
+          label: 'Resources',
+          value: programs.resources * 100
+        }, {
+          label: 'Social Science',
+          value: programs.social_science * 100
+        }, {
+          label: 'Visual/Performing',
+          value: programs.visual_performing * 100
+        }]
+      }));
+    }
+  }]);
+
+  return Programs;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./Client/School.jsx":
+/*!***************************!*\
+  !*** ./Client/School.jsx ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Programs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Programs */ "./Client/Programs.jsx");
+/* harmony import */ var _Ethnicity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ethnicity */ "./Client/Ethnicity.jsx");
+/* harmony import */ var _Income__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Income */ "./Client/Income.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
 
 
 
@@ -180,151 +520,15 @@ var School = /*#__PURE__*/function (_React$Component) {
           id: "location"
         }, "City: ", results[0].school.city, "State: ", results[0].school.state, "Zip: ", results[0].school.zip), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "total-students"
-        }, "Total Number of Students:", ' ', enrollment.undergrad_12_month + enrollment.grad_12_month), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "Total Number of Students: ", enrollment.undergrad_12_month + enrollment.grad_12_month), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "charts"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "program-chart"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
-          height: 800,
-          width: 800,
-          formatValues: function formatValues(values, total) {
-            return "".concat((values / total * 100).toFixed(2), "%");
-          },
-          data: [{
-            label: 'Agriculture',
-            value: programs.agriculture * 100
-          }, {
-            label: 'Architecture',
-            value: programs.agriculture * 100
-          }, {
-            label: 'Biological',
-            value: programs.biological * 100
-          }, {
-            label: 'Business Marketing',
-            value: programs.business_marketing * 100
-          }, {
-            label: 'Communications',
-            value: programs.communication * 100
-          }, {
-            label: 'Computer',
-            value: programs.computer * 100
-          }, {
-            label: 'Education',
-            value: programs.education * 100
-          }, {
-            label: 'Engineering',
-            value: programs.engineering * 100
-          }, {
-            label: 'English',
-            value: programs.english * 100
-          }, {
-            label: 'Ehtnic Cultural Gender',
-            value: programs.ethnic_cultural_gender * 100
-          }, {
-            label: 'Family Consumer Science',
-            value: programs.family_consumer_science * 100
-          }, {
-            label: 'Health',
-            value: programs.health * 100
-          }, {
-            label: 'History',
-            value: programs.history * 100
-          }, {
-            label: 'Humanities',
-            value: programs.humanities * 100
-          }, {
-            label: 'Language',
-            value: programs.language * 100
-          }, {
-            label: 'Legal',
-            value: programs.legal * 100
-          }, {
-            label: 'Mathematics',
-            value: programs.mathematics * 100
-          }, {
-            label: 'Multi-discipline',
-            value: programs.multidiscipline * 100
-          }, {
-            label: 'Parks & Recreation Fitness',
-            value: programs.parks_recreation_fitness * 100
-          }, {
-            label: 'Philosophy/Religion',
-            value: programs.philosophy_religious * 100
-          }, {
-            label: 'Physical Science',
-            value: programs.physical_science * 100
-          }, {
-            label: 'Psychology',
-            value: programs.psychology * 100
-          }, {
-            label: 'Public Administration/Social Service',
-            value: programs.public_administration_social_service * 100
-          }, {
-            label: 'Resources',
-            value: programs.resources * 100
-          }, {
-            label: 'Social Science',
-            value: programs.social_science * 100
-          }, {
-            label: 'Visual/Performing',
-            value: programs.visual_performing * 100
-          }]
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "ethnicity-chart"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
-          height: 300,
-          width: 400,
-          data: [{
-            label: 'White',
-            value: students.white * 100
-          }, {
-            label: 'Black',
-            value: students.black * 100
-          }, {
-            label: 'Aian',
-            value: students.aian * 100
-          }, {
-            label: 'Asian',
-            value: students.asian * 100
-          }, {
-            label: 'Hispanic',
-            value: students.hispanic * 100
-          }, {
-            label: 'NHPI',
-            value: students.nhpi * 100
-          }, {
-            label: 'Non-resident Alien',
-            value: students.non_resident_alien * 100
-          }, {
-            label: 'Two or More',
-            value: students.two_or_more * 100
-          }, {
-            label: 'Unknown',
-            value: students.unknown * 100
-          }]
-        })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "income-chart"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_donut_chart__WEBPACK_IMPORTED_MODULE_1___default.a, {
-          formatValues: function formatValues(values, total) {
-            return "".concat((values / total * 100).toFixed(2), "%");
-          },
-          data: [{
-            label: '$0-$30,000',
-            value: income.share_lowincome['0_30000'] * 100
-          }, {
-            label: '$30,001-$48,000',
-            value: income.share_middleincome['30001_48000'] * 100
-          }, {
-            label: '$48,001-$75,000',
-            value: income.share_middleincome['48001_75000'] * 100
-          }, {
-            label: '$75,001-$110,000',
-            value: income.share_highincome['75001_110000'] * 100
-          }, {
-            label: '$110,001+',
-            value: income.share_highincome['110001plus'] * 100
-          }]
-        })))));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Programs__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          programs: programs
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Ethnicity__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          students: students
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Income__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          income: income
+        }))));
       }
     }
   }]);
