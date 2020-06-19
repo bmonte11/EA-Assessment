@@ -1,38 +1,39 @@
 {
-	"name": "coding-assessment",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.jsx",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node server.js",
-		"build": "webpack -w",
-		"start-dev": "webpack-dev-server"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@material-ui/core": "^4.10.2",
-		"@material-ui/icons": "^4.9.1",
-		"babel": "^6.23.0",
-		"express": "^4.17.1",
-		"file-saver": "^2.0.2",
-		"path": "^0.12.7",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-donut-chart": "^1.1.8",
-		"react-router-dom": "^5.2.0",
-		"webpack": "^4.43.0",
-		"webpack-dev-server": "^3.11.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.10.2",
-		"@babel/preset-env": "^7.10.2",
-		"@babel/preset-react": "^7.10.1",
-		"babel-loader": "^8.1.0",
-		"css-loader": "^3.6.0",
-		"html-loader": "^1.1.0",
-		"html-webpack-plugin": "^4.3.0",
-		"webpack-cli": "^3.3.11"
-	}
+  "name": "coding-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js & npm run build",
+    "build": "webpack -w",
+    "start-dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "babel": "^6.23.0",
+    "express": "^4.17.1",
+    "file-saver": "^2.0.2",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-donut-chart": "^1.1.8",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack-cli": "^3.3.11"
+  }
 }

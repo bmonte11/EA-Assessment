@@ -1,5 +1,7 @@
 import React from 'react';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import Paper from '@material-ui/core/Paper';
+import { Container } from '@material-ui/core';
 
 class School extends React.Component {
   constructor(props) {
@@ -32,28 +34,46 @@ class School extends React.Component {
       const blob = new Blob([JSON.stringify(results[0].school)], {
         type: 'application/json',
       });
+      console.log(results);
       return (
         <div style={infoStyle}>
-          <div style={headingStyle}>
-            <h2>School Info</h2>
-            <GetAppIcon
-              cursor={'pointer'}
-              onClick={() => saveAs(blob, 'SchoolData.csv')}
-            />
-          </div>
-          <div id="school-info" style={chartStyle}>
-            <div id="name">School: {results[0].school.name}</div>
-            <div id="website">Website: {results[0].school.school_url}</div>
-            <div id="location">
-              City: {results[0].school.city}
-              State: {results[0].school.state}
-              Zip: {results[0].school.zip}
+          <Container component={Paper}>
+            <div style={headingStyle}>
+              <h2>School Info</h2>
+              <GetAppIcon
+                cursor={'pointer'}
+                onClick={() => saveAs(blob, 'SchoolData.csv')}
+              />
+              <p>Download to .csv</p>
             </div>
-            <div id="total-students">
-              Total Number of Students:{' '}
-              {enrollment.undergrad_12_month + enrollment.grad_12_month}
+            <div id="school-info" style={chartStyle}>
+              <p id="name">
+                {' '}
+                <strong>School: </strong>
+                {results[0].school.name}
+              </p>
+              <p id="website">
+                <strong>Website: </strong>
+                {results[0].school.school_url}
+              </p>
+              <p id="city">
+                <strong> City: </strong>
+                {results[0].school.city}
+              </p>
+              <p id="state">
+                <strong> State: </strong>
+                {results[0].school.state}
+              </p>
+              <p id="zip">
+                <strong> Zip: </strong>
+                {results[0].school.zip}
+              </p>
+              <p id="total-students">
+                <strong>Total Number of Students: </strong>
+                {enrollment.undergrad_12_month + enrollment.grad_12_month}
+              </p>
             </div>
-          </div>
+          </Container>
         </div>
       );
     }
@@ -61,6 +81,8 @@ class School extends React.Component {
 }
 
 const infoStyle = {
+  fontFamily:
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',

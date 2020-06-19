@@ -2,6 +2,8 @@ import React from 'react';
 import DonutChart from 'react-donut-chart';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import { saveAs } from 'file-saver';
+import Paper from '@material-ui/core/Paper';
+import { Container } from '@material-ui/core';
 
 export default class Income extends React.Component {
   constructor(props) {
@@ -35,45 +37,48 @@ export default class Income extends React.Component {
       });
       return (
         <div style={incomeStyle}>
-          <div style={headingStyle}>
-            <h2>Student Family Income Breakdown</h2>
-            <GetAppIcon
-              cursor={'pointer'}
-              onClick={() => saveAs(blob, 'IncomeData.csv')}
-            />
-          </div>
-          <div id="income-chart" style={chartStyle}>
-            <DonutChart
-              height={750}
-              width={750}
-              legend={false}
-              formatValues={(values, total) =>
-                `${((values / total) * 100).toFixed(2)}%`
-              }
-              data={[
-                {
-                  label: '$0-$30,000',
-                  value: income.share_lowincome['0_30000'] * 100,
-                },
-                {
-                  label: '$30,001-$48,000',
-                  value: income.share_middleincome['30001_48000'] * 100,
-                },
-                {
-                  label: '$48,001-$75,000',
-                  value: income.share_middleincome['48001_75000'] * 100,
-                },
-                {
-                  label: '$75,001-$110,000',
-                  value: income.share_highincome['75001_110000'] * 100,
-                },
-                {
-                  label: '$110,001+',
-                  value: income.share_highincome['110001plus'] * 100,
-                },
-              ]}
-            />
-          </div>
+          <Container component={Paper}>
+            <div className="heading" style={headingStyle}>
+              <h2>Student Family Income Breakdown</h2>
+              <GetAppIcon
+                cursor={'pointer'}
+                onClick={() => saveAs(blob, 'IncomeData.csv')}
+              />
+              <p>Download to .csv</p>
+            </div>
+            <div className="chart" style={chartStyle}>
+              <DonutChart
+                height={750}
+                width={750}
+                legend={false}
+                formatValues={(values, total) =>
+                  `${((values / total) * 100).toFixed(2)}%`
+                }
+                data={[
+                  {
+                    label: '$0-$30,000',
+                    value: income.share_lowincome['0_30000'] * 100,
+                  },
+                  {
+                    label: '$30,001-$48,000',
+                    value: income.share_middleincome['30001_48000'] * 100,
+                  },
+                  {
+                    label: '$48,001-$75,000',
+                    value: income.share_middleincome['48001_75000'] * 100,
+                  },
+                  {
+                    label: '$75,001-$110,000',
+                    value: income.share_highincome['75001_110000'] * 100,
+                  },
+                  {
+                    label: '$110,001+',
+                    value: income.share_highincome['110001plus'] * 100,
+                  },
+                ]}
+              />
+            </div>
+          </Container>
         </div>
       );
     }
@@ -81,6 +86,8 @@ export default class Income extends React.Component {
 }
 
 const incomeStyle = {
+  fontFamily:
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',

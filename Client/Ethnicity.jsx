@@ -1,6 +1,7 @@
 import React from 'react';
 import DonutChart from 'react-donut-chart';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import { Container, Paper } from '@material-ui/core';
 
 export default class Ethnicity extends React.Component {
   constructor(props) {
@@ -33,58 +34,61 @@ export default class Ethnicity extends React.Component {
       });
       return (
         <div style={ethnicityStyle}>
-          <div style={headingStyle}>
-            <h2>Ethnicity Breakdown</h2>
-            <GetAppIcon
-              cursor={'pointer'}
-              onClick={() => saveAs(blob, 'EthnicityData.csv')}
-            />
-          </div>
-          <div id="ethnicity-chart" style={chartStyle}>
-            <DonutChart
-              height={750}
-              width={750}
-              legend={false}
-              data={[
-                {
-                  label: 'White',
-                  value: students.white * 100,
-                },
-                {
-                  label: 'Black',
-                  value: students.black * 100,
-                },
-                {
-                  label: 'Aian',
-                  value: students.aian * 100,
-                },
-                {
-                  label: 'Asian',
-                  value: students.asian * 100,
-                },
-                {
-                  label: 'Hispanic',
-                  value: students.hispanic * 100,
-                },
-                {
-                  label: 'NHPI',
-                  value: students.nhpi * 100,
-                },
-                {
-                  label: 'Non-resident Alien',
-                  value: students.non_resident_alien * 100,
-                },
-                {
-                  label: 'Two or More',
-                  value: students.two_or_more * 100,
-                },
-                {
-                  label: 'Unknown',
-                  value: students.unknown * 100,
-                },
-              ]}
-            />
-          </div>
+          <Container component={Paper}>
+            <div className="heading" style={headingStyle}>
+              <h2>Ethnicity Breakdown</h2>
+              <GetAppIcon
+                cursor={'pointer'}
+                onClick={() => saveAs(blob, 'EthnicityData.csv')}
+              />
+              <p>Download to .csv</p>
+            </div>
+            <div className="chart" style={chartStyle}>
+              <DonutChart
+                height={750}
+                width={750}
+                legend={false}
+                data={[
+                  {
+                    label: 'White',
+                    value: students.white * 100,
+                  },
+                  {
+                    label: 'Black',
+                    value: students.black * 100,
+                  },
+                  {
+                    label: 'Aian',
+                    value: students.aian * 100,
+                  },
+                  {
+                    label: 'Asian',
+                    value: students.asian * 100,
+                  },
+                  {
+                    label: 'Hispanic',
+                    value: students.hispanic * 100,
+                  },
+                  {
+                    label: 'NHPI',
+                    value: students.nhpi * 100,
+                  },
+                  {
+                    label: 'Non-resident Alien',
+                    value: students.non_resident_alien * 100,
+                  },
+                  {
+                    label: 'Two or More',
+                    value: students.two_or_more * 100,
+                  },
+                  {
+                    label: 'Unknown',
+                    value: students.unknown * 100,
+                  },
+                ]}
+              />
+            </div>
+          </Container>
         </div>
       );
     }
@@ -92,6 +96,8 @@ export default class Ethnicity extends React.Component {
 }
 
 const ethnicityStyle = {
+  fontFamily:
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
