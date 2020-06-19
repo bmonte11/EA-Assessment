@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js & npm run build",
+    "start": "node server.jsx & npm run build",
     "build": "webpack -w",
     "start-dev": "webpack-dev-server"
   },
